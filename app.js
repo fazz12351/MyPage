@@ -1,18 +1,30 @@
-function romantoInt(romanNumber){
-    let sum=0;
-    let number=[["i",1],["v",5],["x",10],["l",50],["c",100],["d",500],["m",10]]
+function isPalindrome(x) {
+    var number = x,
+        output = [],
+        output1 = [],
+        sNumber = number.toString();
 
-    for(var i=0;i<romanNumber.length;i++){
-       for(var j=0;j<number.length;j++){
+    for (var i = 0, len = sNumber.length; i < len; i += 1) {
+        output.push(+sNumber.charAt(i));
+    }
 
-        if(romanNumber[i]==number[j][0]){
-            sum+=number[j][1];
-            console.log(sum)
+    // console.log(output);
+    for (var i = output.length - 1; i >= 0; i--) {
+        output1.push(output[i])
+    }
+
+    for (var u = 0; u < output.length; u++) {
+        for (var k = 0; k < output1.length; k++) {
+            if (output[u] === output1[k]) {
+                return true
+            } else {
+                return false
+            }
         }
-        
-       }
     }
 
 
 }
-let a=romantoInt("xii");
+
+let a = isPalindrome(132)
+console.log(a)
