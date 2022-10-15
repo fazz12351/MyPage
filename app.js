@@ -1,30 +1,28 @@
-function isPalindrome(x) {
-    var number = x,
-        output = [],
-        output1 = [],
-        sNumber = number.toString();
 
-    for (var i = 0, len = sNumber.length; i < len; i += 1) {
-        output.push(+sNumber.charAt(i));
-    }
 
-    // console.log(output);
-    for (var i = output.length - 1; i >= 0; i--) {
-        output1.push(output[i])
-    }
+let myarra=["flight","flask"]
+function isPalindrome(array) {
+    currentWord=""
+    currentwordarray=[]
+    newword=[];
+    for(var i=0;i<array.length;i++){
+        currentWord=array[i];
+        currentwordarray.push(currentWord)
+       
+        for(var j=0;j<currentWord.length;j++){
+            console.log(currentWord[j])
+            newword.push(currentWord[j])
 
-    for (var u = 0; u < output.length; u++) {
-        for (var k = 0; k < output1.length; k++) {
-            if (output[u] === output1[k]) {
-                return true
-            } else {
-                return false
-            }
         }
     }
+    console.log(newword)
+
+  
+
+
 
 
 }
 
-let a = isPalindrome(132)
-console.log(a)
+
+isPalindrome(myarra)
