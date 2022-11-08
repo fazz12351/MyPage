@@ -1,18 +1,25 @@
-function romantoInt(romanNumber){
-    let sum=0;
-    let number=[["i",1],["v",5],["x",10],["l",50],["c",100],["d",500],["m",10]]
+function isPalidrone(x){
+    let isPalidrone=false
+    let NumToiString=x.toString();
+    let reversed=NumToiString.split("").reverse("").join("");
+    console.log(reversed)
+    // let reversed=NumToiString.split("").reverse().join("")
+    
 
-    for(var i=0;i<romanNumber.length;i++){
-       for(var j=0;j<number.length;j++){
+    if(reversed===NumToiString){
+        isPalidrone=true
 
-        if(romanNumber[i]==number[j][0]){
-            sum+=number[j][1];
-            console.log(sum)
-        }
-        
-       }
+    }
+    else{
+        isPalidrone=false
     }
 
-
+    
+    return isPalidrone;
+ 
 }
-let a=romantoInt("xii");
+
+let a =isPalidrone(169);
+console.log(a)
+
+
