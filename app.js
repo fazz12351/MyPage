@@ -1,30 +1,25 @@
-function isPalindrome(x) {
-    var number = x,
-        output = [],
-        output1 = [],
-        sNumber = number.toString();
+function isPalidrone(x){
+    let isPalidrone=false
+    let NumToiString=x.toString();
+    let reversed=NumToiString.split("").reverse("").join("");
+    console.log(reversed)
+    // let reversed=NumToiString.split("").reverse().join("")
+    
 
-    for (var i = 0, len = sNumber.length; i < len; i += 1) {
-        output.push(+sNumber.charAt(i));
+    if(reversed===NumToiString){
+        isPalidrone=true
+
+    }
+    else{
+        isPalidrone=false
     }
 
-    // console.log(output);
-    for (var i = output.length - 1; i >= 0; i--) {
-        output1.push(output[i])
-    }
-
-    for (var u = 0; u < output.length; u++) {
-        for (var k = 0; k < output1.length; k++) {
-            if (output[u] === output1[k]) {
-                return true
-            } else {
-                return false
-            }
-        }
-    }
-
-
+    
+    return isPalidrone;
+ 
 }
 
-let a = isPalindrome(132)
+let a =isPalidrone(169);
 console.log(a)
+
+
